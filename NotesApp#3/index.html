@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/">
+
+    <title>Notes App</title>
+</head>
+<body>
+    
+    <!-- NAVBAR-->
+    
+      <!--MAIN APP-->
+      <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Add Image</a></li>                
+                <li><a href="#">Aling-Middle</a></li>                
+                <li><a href="#">Aling-Right</a></li>                
+                <li><a href="#">Align-Left</a></li>                
+                <li><a href="#">Font</a></li>
+                <li><a href="#">Font Size</a></li>
+                <li><a href="#">Bold</a></li>
+                <li><a href="#">Underline</a></li>
+                <li><a href="#">Italics</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+            <a href="#">
+            <div class="logo__main">
+                <img class="logo" src="assets/notepalstemplate.png">
+                <div class="logo__text">NotePals</div>
+        </div>
+    </a>
+        </div>
+    </nav>
+   <div class="notes" id="app">
+   <div class="notes__sidebar">
+        
+       <!-- <h1 class="notepals__title">Notepals</h1> -->
+       <button onclick="openBackgroundPopup()">Change Background</button>
+        <button class="notes__add" type="button">Add Notes</button>
+        <div class="notes__list">
+            <div class="notes__list-item notes__list-item--selected">
+                <div class="notes__small-title">Computational Biology</div>
+                <div class="notes__small-body">Notes tentang....</div>
+                <div class="notes__small-updated">Thursday</div>
+            </div>
+            <div class="notes__list-item notes__list-item--selected">
+                <div class="notes__small-title">Notes</div>
+                <div class="notes__small-body">Notes</div>
+                <div class="notes__small-updated">Thursday</div>
+            </div>
+            <div class="notes__list-item notes__list-item--selected">
+                <div class="notes__small-title">Notes</div>
+                <div class="notes__small-body">Notes</div>
+                <div class="notes__small-updated">Thursday</div>
+            </div>
+        </div>
+    </div>
+  <!----> <div class="notes__preview">
+    <input class="notes__title" type="text" placeholder="Enter a title.">
+    <textarea class="notes__body">Notes body</textarea>
+   </div> 
+    </div>
+
+    <div class="popup" id="backgroundPopup">
+        <div class="popup-content">
+          <h2>Select Background</h2>
+          <button onclick="openColorPopup()">Change Color</button>
+          <button onclick="openImagePopup()">Change Image</button>
+          <button class="btn-change-bg" onclick="closeBackgroundPopup()">Cancel</button>
+        </div>
+      </div>
+    
+      <div class="popup" id="colorPopup">
+        <div class="popup-content">
+          <h2>Select Color</h2>
+          <div>
+            <label for="color">Color:</label>
+            <input type="color" id="color">
+          </div>
+          <button class="btn-change-bg" onclick="changeBackgroundColor()">Apply</button>
+          <button class="btn-change-bg" onclick="closeColorPopup()">Cancel</button>
+        </div>
+      </div>
+    
+      <div class="popup" id="imagePopup">
+        <div class="popup-content">
+          <h2>Select Image</h2>
+          <div>
+            <label for="customBg">Custom Background:</label>
+            <input type="file" id="customBg" accept=".svg, .gif, .jpg, .jpeg, .png">
+          </div>
+          <button class="btn-change-bg" onclick="changeBackgroundImage()">Apply</button>
+          <button class="btn-change-bg" onclick="closeImagePopup()">Cancel</button>
+        </div>
+      </div>
+    
+
+    <script src="Main.js"></script>
+</body>
+</html>
