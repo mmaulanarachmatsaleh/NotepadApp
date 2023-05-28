@@ -1,3 +1,5 @@
+//THIS IS FOR CHANGE BACKGROUND. DOESNT WORK
+
 var backgroundPopup = document.getElementById('backgroundPopup');
 var colorPopup = document.getElementById('colorPopup');
 var colorInput = document.getElementById('color');
