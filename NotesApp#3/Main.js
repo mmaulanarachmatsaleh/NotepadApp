@@ -5,7 +5,7 @@ var colorPopup = document.getElementById('colorPopup');
 var colorInput = document.getElementById('color');
 var imagePopup = document.getElementById('imagePopup');
 var customBgInput = document.getElementById('customBg');
-var div = document.getElementById('notes__sidebar');
+var sidebar = document.getElementById('notes__sidebar');
 
 function openBackgroundPopup() {
   backgroundPopup.style.display = 'flex';
@@ -35,8 +35,8 @@ function closeImagePopup() {
 
 function changeBackgroundColor() {
   if (colorInput.value) {
-    div.style.backgroundImage = 'none';
-    div.style.backgroundColor = colorInput.value;
+    sidebar.style.backgroundImage = 'none';
+    sidebar.style.backgroundColor = colorInput.value;
   }
   closeColorPopup();
 }
@@ -46,9 +46,10 @@ function changeBackgroundImage() {
     var file = customBgInput.files[0];
     var reader = new FileReader();
     reader.onload = function(event) {
-      div.style.backgroundImage = `url('${event.target.result}')`;
+      sidebar.style.backgroundImage = `url('${event.target.result}')`;
     };
     reader.readAsDataURL(file);
   }
   closeImagePopup();
 }
+

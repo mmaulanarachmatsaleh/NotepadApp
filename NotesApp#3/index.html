@@ -43,7 +43,8 @@
         </div>
     </nav>
    <div class="notes" id="app">
-   <div class="notes__sidebar">
+    <div class="notes__sidebar" id="notes__sidebar">
+
         
        <!-- <h1 class="notepals__title">Notepals</h1> -->
        <button onclick="openBackgroundPopup()">Change Background</button>
@@ -53,27 +54,37 @@
                 <div class="notes__small-title">Computational Biology</div>
                 <div class="notes__small-body">Notes tentang....</div>
                 <div class="notes__small-updated">Thursday</div>
+                <button class="notes__list-delete">
+                  <img class="delete_button" src="assets/delete.png"></button>
+
             </div>
             <div class="notes__list-item notes__list-item--selected">
                 <div class="notes__small-title">Notes</div>
                 <div class="notes__small-body">Notes</div>
                 <div class="notes__small-updated">Thursday</div>
+                <button class="notes__list-delete">
+                  <img class="delete_button" src="assets/delete.png"></button>
+
             </div>
             <div class="notes__list-item notes__list-item--selected">
                 <div class="notes__small-title">Notes</div>
                 <div class="notes__small-body">Notes</div>
                 <div class="notes__small-updated">Thursday</div>
+                <button class="notes__list-delete">
+                  <img class="delete_button" src="assets/delete.png"></button>
+
             </div>
         </div>
     </div>
+
+
    <div class="notes__preview">
     <input class="notes__title" type="text" placeholder="Enter a title.">
     <textarea class="notes__body">Notes body</textarea>
    </div> 
     </div>
+    
 
-
-    <!--CODE BELOW IS FOR CHANGING BACKGROUND. DOESNT WORK YET-->
     <div class="popup" id="backgroundPopup">
         <div class="popup-content">
           <h2>Select Background</h2>
